@@ -1,0 +1,31 @@
+{
+  "name": "@apinstein/ai-diagrams",
+  "version": "0.1.0",
+  "description": "Shared, deterministic PNG rendering for diagrams-as-code.",
+  "type": "module",
+  "bin": {
+    "ai-diagrams": "bin/ai-diagrams.mjs"
+  },
+  "files": [
+    "bin/",
+    "config/",
+    "lib/",
+    "make/",
+    "skills/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "11.16.0",
+    "@plantuml/mcp-js": "0.2.0",
+    "@resvg/resvg-js": "2.6.2",
+    "@viz-js/viz": "3.29.0",
+    "likec4": "1.46.0"
+  }
+}

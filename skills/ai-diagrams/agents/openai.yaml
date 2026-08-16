@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Diagrams"
+  short_description: "Render diagrams to verified PNG files"
+  default_prompt: "Use $ai-diagrams to render and inspect this project’s diagrams."

@@ -1,0 +1,13 @@
+specification {
+    element system
+}
+
+model {
+    app = system 'Diagram app'
+}
+
+views {
+    view overview {
+        include app
+    }
+}
