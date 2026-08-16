@@ -4,8 +4,7 @@
 Mermaid (`.mmd`) and PlantUML (`.puml`) sources, renders them through a
 temporary SVG, and commits PNG as the reader-facing artifact.
 
-It requires Node.js 22.18 or newer because current browser-backed renderers
-need that supported runtime line.
+It requires Node.js 20.19 or newer.
 
 ## Install and use
 

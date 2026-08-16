@@ -19,7 +19,7 @@
     "pack:check": "npm pack --dry-run"
   },
   "engines": {
-    "node": ">=22.18.0"
+    "node": ">=20.19.0"
   },
   "dependencies": {
     "@mermaid-js/mermaid-cli": "11.16.0",
