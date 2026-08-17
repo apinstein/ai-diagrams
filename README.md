@@ -8,11 +8,11 @@ It requires Node.js 20.19 or newer.
 
 ## Install and use
 
-After publishing the package, install the renderer globally (or use it through
-`npx` for a single invocation):
+Install the renderer globally from this repository (or use it through `npx`
+for a single invocation):
 
 ```sh
-npm install --global @apinstein/ai-diagrams
+npm install --global git+https://github.com/apinstein/ai-diagrams.git
 ```
 
 Check the local renderer installation:
