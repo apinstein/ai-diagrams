@@ -21,7 +21,7 @@ Check the local renderer installation:
 ai-diagrams doctor
 ```
 
-Render a project's diagrams:
+Ad-hoc diagrams rendering:
 
 ```sh
 ai-diagrams mermaid --input docs/architecture/diagrams/flow.mmd --output docs/architecture/diagrams/rendered/mermaid/flow.png
@@ -29,7 +29,7 @@ ai-diagrams plantuml --input docs/architecture/diagrams/containers.puml --output
 ai-diagrams likec4 --source docs/architecture/eshift.c4 --output docs/architecture/rendered/likec4
 ```
 
-For Make-based projects:
+Automatic project-wide, incremental, idempotent diagram rendering with Make:
 
 ```makefile
 DIAGRAM_SOURCE := docs/architecture/diagrams
@@ -37,9 +37,12 @@ DIAGRAM_OUTPUT := $(DIAGRAM_SOURCE)/rendered
 include $(shell ai-diagrams makefile-path)
 ```
 
-For directory-wide Mermaid and PlantUML rendering, `render` and `check`
-regenerate in a temporary directory and compare expected PNG files
-byte-for-byte. They leave no persisted SVG files.
+For directory-wide Mermaid and PlantUML rendering, `render` updates PNG files
+in the output directory, skipping files whose PNG is already at least as new as
+its source. `check` instead renders fresh PNGs in a temporary directory and
+compares them byte-for-byte with the expected PNG files, without modifying
+those files. Both commands use temporary SVG intermediates and leave no
+persisted SVG files.
 
 The packaged Codex skill is deliberately separate from renderer installation:
 install it through the normal Codex skill or plugin workflow. The skill checks
